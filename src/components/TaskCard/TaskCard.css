@@ -1,0 +1,184 @@
+/* TaskCard.css */
+.task_card {
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #dcdcdc;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    cursor: grab;
+    
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 13px;
+    margin-bottom: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .task_card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .task_card:active{
+    opacity: 3;
+    border: 1px solid #111;
+}
+
+  
+  .task_text {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333333;
+  }
+  
+  .task_card_bottom_line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task_delete {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+  }
+  
+ 
+  .delete_icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+
+  .task_actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .edit_button, .delete_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .edit_icon {
+    color: #4caf50; 
+    font-size: 18px;
+  }
+  
+  .delete_icon {
+    color: #f44336; 
+    font-size: 18px;
+  }
+
+  .edit_button:hover{
+    background: rgb(220, 255, 208);
+    border-radius: 50px;
+  }
+
+   .delete_button:hover {
+    background: rgb(255, 235, 229);
+
+    border-radius: 50px;
+    
+  }
+  
+  .edit_button:hover .edit_icon,
+  .delete_button:hover .delete_icon {
+    opacity: 3;
+  
+    
+  }
+
+  .task_description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    max-height: 100px;
+    max-width: 250px;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+   
+  }
+  
+  /* Due date styles */
+  .task_dueDate {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 0px;
+    font-style: italic;
+  }
+
+  
+  .task_text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+
+  /* Hide the length of the description  */
+  
+  /* .task_description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    white-space: normal; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+  } */
+
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .task_card {
+      padding: 10px;
+    }
+  
+    .task_text {
+      font-size: 14px;
+    }
+  
+    .task_description {
+      font-size: 12px;
+    }
+  }
+  
+
+  [data-theme='dark'] .task_text {
+    color: #ffffff;
+  }
+
+  
+  /* Task Card Styles */
+  .task_card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+  }
+  
+  .task_description {
+    color: var(--task-description);
+  }
+  
+  .task_dueDate {
+    color: var(--task-date);
+  }

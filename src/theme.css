@@ -1,0 +1,127 @@
+/* Theme Variables */
+:root {
+    /* Light theme */
+    --bg-primary: white;
+    --text-primary: #333333;
+    --card-bg: #ffffff;
+    --border-color: #dcdcdc;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --header-bg: #ffffff;
+    --button-bg: #487af9;
+    --button-text: #ffffff;
+    --modal-bg: #ffffff;
+    --input-bg: #f9f9f9;
+    --task-description: #555;
+    --task-date: #888;
+    --column-bg-todo: #f1f9fc;
+    --column-bg-progress: #fff3e0;
+    --column-bg-completed: #e8f5e9;
+  }
+  
+  [data-theme='dark'] {
+    --bg-primary: #1a1a1a;
+    --text-primary: #ffffff;
+    --card-bg: #2d2d2d;
+    --border-color: #404040;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --header-bg: #2d2d2d;
+    --button-bg: #6b93f7;
+    --modal-bg: #2d2d2d;
+    --input-bg: #3d3d3d;
+    --task-description: #cccccc;
+    --task-date: #aaaaaa;
+    --column-bg-todo: #2c3e50;
+    --column-bg-progress: #34495e;
+    --column-bg-completed: #2c5640;
+  }
+  
+  /* App Layout */
+  .app {
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease;
+  }
+  
+  .app_main {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 8%;
+    gap: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Header Styles */
+  .header {
+    color: var(--text-primary);
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Button Styles */
+  .add-task-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    background: white;
+    color:black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  
+  .add-task-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Theme Toggle */
+  .theme-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #4a4a4a;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-toggle::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s ease;
+  }
+  
+  [data-theme='dark'] .theme-toggle {
+    background-color: #6b6b6b;
+  }
+  
+  [data-theme='dark'] .theme-toggle::before {
+    transform: translateX(30px);
+  }
+  
+  

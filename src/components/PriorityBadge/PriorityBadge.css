@@ -1,0 +1,12 @@
+
+/* PriorityBadge.css */
+.priority_badge {
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 12px;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }

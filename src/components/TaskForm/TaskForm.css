@@ -1,0 +1,370 @@
+
+  /* Model Styles  */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .modal {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 450px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .modal h2 {
+    margin-bottom: 1rem;
+    color: #2f3a45;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .modal-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .modal-input:focus {
+    border-color: #23a6d5;
+    outline: none;
+  }
+  
+  .status-select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  .status-select:focus {
+    border-color: #23a6d5;
+    outline: none;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+  
+  .submit-btn,
+  .cancel-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .submit-btn {
+    background: #23a6d5;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cancel-btn {
+    background: #ddd;
+    color: #333;
+  }
+  
+  .cancel-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .modal {
+      width: 90%;
+      max-width: 400px;
+      padding: 1rem;
+    }
+  
+    .modal h2 {
+      font-size: 1.2rem;
+    }
+  
+    .modal-input,
+    .status-select {
+      padding: 0.7rem;
+      font-size: 0.9rem;
+    }
+  
+    .submit-btn,
+    .cancel-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modal {
+      width: 95%;
+      max-width: 350px;
+      padding: 1rem;
+    }
+  
+    .modal h2 {
+      font-size: 1.1rem;
+    }
+  
+    .modal-input,
+    .status-select {
+      padding: 0.6rem;
+      font-size: 0.85rem;
+    }
+  
+    .submit-btn,
+    .cancel-btn {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* Animation Effects */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+
+  /* Priority Group Base Styles */
+.priority-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Priority Label Styles */
+  .priority-label {
+    display: flex;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    flex: 1;
+    min-width: 80px;
+  }
+  
+  .priority-label input {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  .priority-label span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 14px;
+  }
+
+
+  .modal h2 {
+    color: var(--text-primary);
+  }
+  
+  /* Priority Colors - Light Mode */
+  .priority-label input:checked + span {
+    color: #ffffff;
+  }
+  
+  .priority-label input[value="LOW"]:checked + span {
+    background-color: #15d4c8;
+  }
+  
+  .priority-label input[value="MEDIUM"]:checked + span {
+    background-color: #ffd12c;
+  }
+  
+  .priority-label input[value="HIGH"]:checked + span {
+    background-color: #ff4444;
+  }
+  
+  /* Dark Mode Styles */
+  [data-theme='dark'] .priority-group {
+    background-color: #2d2d2d;
+  }
+  
+  [data-theme='dark'] .priority-label span {
+    background-color: #3d3d3d;
+    color: #ffffff;
+  }
+  
+  [data-theme='dark'] .priority-label span:hover {
+    background-color: #4d4d4d;
+  }
+  
+  /* Dark Mode Priority Colors */
+  [data-theme='dark'] .priority-label input[value="LOW"]:checked + span {
+    background-color: #0fa69d;
+  }
+  
+  [data-theme='dark'] .priority-label input[value="MEDIUM"]:checked + span {
+    background-color: #d4ac0d;
+  }
+  
+  [data-theme='dark'] .priority-label input[value="HIGH"]:checked + span {
+    background-color: #d63030;
+  }
+  
+  /* Hover Effects */
+  .priority-label:hover span {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  [data-theme='dark'] .priority-label:hover span {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .priority-group {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .priority-label {
+      width: 100%;
+    }
+  
+    .priority-label span {
+      padding: 10px;
+    }
+  }
+  
+  /* Animation for selection */
+  .priority-label input:checked + span {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Focus styles for accessibility */
+  .priority-label input:focus-visible + span {
+    outline: 2px solid #487af9;
+    outline-offset: 2px;
+  }
+  
+  [data-theme='dark'] .priority-label input:focus-visible + span {
+    outline-color: #6b93f7;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    background-color: var(--modal-bg);
+    color: var(--text-primary);
+  }
+  
+  .modal-input,
+  .status-select,
+  .priority-group {
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .app_main {
+      padding: 20px 4%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .app_main {
+      flex-direction: column;
+      padding: 20px 2%;
+    }
+  
+    .header-group {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .header-controls {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .theme-toggle {
+      width: 50px;
+      height: 25px;
+    }
+  
+    .theme-toggle::before {
+      width: 20px;
+      height: 20px;
+      top: 2.5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-content,
+    .animated-bg {
+      padding: 1rem;
+    }
+  
+    .add-task-btn,
+    .theme-toggle {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  
+
+  

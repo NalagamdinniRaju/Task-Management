@@ -1,0 +1,87 @@
+.task_column_heading {
+    display: flex;
+    align-items: center;
+}
+
+.task_column_icon {
+    width: 30px;
+    margin-right: 5px;
+}
+
+
+.task_column_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .task_column_heading {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  
+  .task_count {
+    font-size: 1rem;
+    color: #555;
+    margin-left: 8px;
+    font-weight: bold;
+  }
+
+  .task_column {
+    position: relative;
+    padding: 1.3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .task_count {
+    position: absolute;
+    top: 20;
+    right: 0;
+
+    font-size: 1rem;
+    color: #555;
+    background-color: #ff98dd;
+    padding: 0.25rem 1rem;
+    border-radius: 0px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+  }
+  
+  
+
+  
+  /* Default styles for desktop */
+.task_column {
+    width: 33.33%;
+    margin: 20px;
+}
+
+/* Large tablets and small desktops */
+@media screen and (max-width: 1200px) {
+    .task_column {
+        width: calc(50% - 40px);
+        margin: 15px;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .task_column {
+        width: calc(100% - 30px);
+        margin: 15px auto;
+    }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+    .task_column {
+        width: 95%;
+        margin: 10px auto;
+    }
+}

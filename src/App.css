@@ -1,0 +1,67 @@
+.app {
+    display: grid;
+    grid-template-rows: 150px auto;
+}
+
+.app_main {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 8%;
+}
+
+.header {
+    padding: 1rem;
+  }
+  
+  .animated-bg {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  
+ 
+  
+  .header-group h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  
+  .add-task-btn,
+  .theme-toggle {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .add-task-btn:hover,
+  .theme-toggle:hover {
+    transform: translateY(-2px);
+  }
+
+
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+
