@@ -6,6 +6,23 @@
 ## 🌟 Overview
 A powerful, modern task management application built with React that transforms your workflow with Kanban-style organization and seamless drag-and-drop functionality.
 
+
+## 🎥 Project Demo
+
+Watch the demo of the project to see it in action:
+
+<a href="https://drive.google.com/file/d/13OWsVpqMikQMKqXGPZj6R6LsvjgSKOGL/view?usp=sharing" target="_blank">
+  <img src="https://res.cloudinary.com/dwiq4s5ut/image/upload/v1738104172/Screenshot_748_k9dqsc.png" alt="Project Demo" width="400" height="200" />
+</a>
+
+*Click the image above or [here](https://drive.google.com/file/d/13OWsVpqMikQMKqXGPZj6R6LsvjgSKOGL/view?usp=sharing) to watch the full video.*
+
+## 🌐 Live Project
+
+Check out the live version of the project here:  
+🔗 **[Live Project Link](https://task-management-nrs.vercel.app/)**
+
+
 ## ✨ Features
 
 ### 📊 Task Organization
@@ -60,7 +77,7 @@ A powerful, modern task management application built with React that transforms 
 
 ```bash
 # 🔍 Clone repository
-git clone https://github.com/yourusername/task-management.git
+git clone https://github.com/NalagamdinniRaju/Task-Management.git
 
 # 📂 Navigate to directory
 cd task-management
@@ -73,6 +90,7 @@ npm start
 ```
 
 # 📸 Screenshots
+
 
 ## 🌞 Light Mode
 
