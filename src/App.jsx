@@ -14,17 +14,7 @@ const App = () => {
   const {
     isDarkMode,
     isModalOpen,
-    taskData,
-    handleChange,
-    handleSubmit,
     setIsModalOpen,
-    editIndex,
-    setTaskData,
-    handleDelete,
-    handleEdit,
-    setActiveCard,
-    onDrop,
-    tasks,
     toggleDarkMode,
     resetForm,
   } = useTaskContext();
@@ -63,14 +53,7 @@ const App = () => {
       </header>
 
       {isModalOpen && (
-        <TaskForm
-{/*           taskData={taskData}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-          setIsModalOpen={setIsModalOpen}
-          editIndex={editIndex}
-          setTaskData={setTaskData} */}
-        />
+        <TaskForm />
       )}
 
       <main className={`app_main ${isDarkMode ? "dark" : "light"}`}>
@@ -78,31 +61,16 @@ const App = () => {
           title="To Do"
           icon={todoIcon}
           status="todo"
-{/*           tasks={tasks}
-          handleDelete={handleDelete}
-          handleEdit={handleEdit}
-          setActiveCard={setActiveCard}
-          onDrop={onDrop} */}
         />
         <TaskColumn
           title="In Progress"
           icon={doingIcon}
-           status="doing"
-{/*           tasks={tasks}
-          handleDelete={handleDelete}
-          handleEdit={handleEdit}
-          setActiveCard={setActiveCard}
-          onDrop={onDrop} */}
+          status="doing"
         />
         <TaskColumn
           title="Completed"
           icon={doneIcon}
           status="done"
-{/*           tasks={tasks}
-          handleDelete={handleDelete}
-          handleEdit={handleEdit}
-          setActiveCard={setActiveCard}
-          onDrop={onDrop} */}
         />
       </main>
     </div>
