@@ -64,12 +64,12 @@ const App = () => {
 
       {isModalOpen && (
         <TaskForm
-          taskData={taskData}
+{/*           taskData={taskData}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           setIsModalOpen={setIsModalOpen}
           editIndex={editIndex}
-          setTaskData={setTaskData}
+          setTaskData={setTaskData} */}
         />
       )}
 
@@ -77,32 +77,32 @@ const App = () => {
         <TaskColumn
           title="To Do"
           icon={todoIcon}
-          tasks={tasks}
           status="todo"
+{/*           tasks={tasks}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
           setActiveCard={setActiveCard}
-          onDrop={onDrop}
+          onDrop={onDrop} */}
         />
         <TaskColumn
           title="In Progress"
           icon={doingIcon}
-          tasks={tasks}
-          status="doing"
+           status="doing"
+{/*           tasks={tasks}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
           setActiveCard={setActiveCard}
-          onDrop={onDrop}
+          onDrop={onDrop} */}
         />
         <TaskColumn
           title="Completed"
           icon={doneIcon}
-          tasks={tasks}
           status="done"
+{/*           tasks={tasks}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
           setActiveCard={setActiveCard}
-          onDrop={onDrop}
+          onDrop={onDrop} */}
         />
       </main>
     </div>
