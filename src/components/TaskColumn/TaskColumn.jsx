@@ -6,13 +6,8 @@ import DropArea from "../DropArea/DropArea";
 import "./TaskColumn.css";
 
 const TaskColumn = ({ title, icon, status }) => {
-  const { tasks, handleDelete, setActiveCard, onDrop, handleEdit,isDarkMode } = useTaskContext();
+  const { tasks, onDrop,isDarkMode } = useTaskContext();
   
-//   const backgroundColors = {
-//     "To Do": isDarkMode ? "#1c1c1c" : "#f1f9fc",
-//     "In Progress": isDarkMode ? "#1c1c1c" : "#fff3e0",
-//     "Completed": isDarkMode ? "#1c1c1c" : "#e8f5e9",
-//   };
 const backgroundColors = {
     "To Do": isDarkMode ? "#1c1c1c" : "#f1f9fc",
     "In Progress": isDarkMode ? "#1c1c1c" : "#fff3e0",
@@ -27,10 +22,6 @@ const backgroundColors = {
   console.log("Dark mode is ", isDarkMode);
 
   const taskCount = tasks.filter((task) => task.status === status).length;
-
-//   const handleSaveEdit = (index, updatedTask) => {
-//     handleEdit(index, updatedTask, status);
-//   };
 
   return (
     <section className="task_column"  style={columnStyle}
@@ -54,10 +45,6 @@ const backgroundColors = {
                 dueDate={task.dueDate} 
                 description={task.description} 
                 index={index}
-               
-{/*                 handleDelete={() => handleDelete(index)}
-                setActiveCard={setActiveCard}
-                handleEdit={() => handleEdit(index)}  */}
               />
 
               <DropArea onDrop={() => onDrop(status, index + 1)} />
