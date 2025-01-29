@@ -53,10 +53,11 @@ const backgroundColors = {
                 priority={task.priority}
                 dueDate={task.dueDate} 
                 description={task.description} 
-                handleDelete={() => handleDelete(index)}
                 index={index}
+               
+{/*                 handleDelete={() => handleDelete(index)}
                 setActiveCard={setActiveCard}
-                handleEdit={() => handleEdit(index)} 
+                handleEdit={() => handleEdit(index)}  */}
               />
 
               <DropArea onDrop={() => onDrop(status, index + 1)} />
