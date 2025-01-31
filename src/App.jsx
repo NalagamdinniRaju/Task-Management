@@ -27,7 +27,7 @@ const App = () => {
       <header className={`header ${isDarkMode ? "dark" : "light"}`}>
         <div className="animated-bg glass-effect header-content">
           <div className="header-group">
-            <h1>Task Management</h1>
+            <h1>TaskTrek</h1>
             <div className="header-controls">
               <button
                 className="add-task-btn"
